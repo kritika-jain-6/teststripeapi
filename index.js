@@ -9,6 +9,8 @@ app.use(cors());
 app.use(express.json());
 
 app.post('/create-subscription', async (req, res) => {
+  console.log(req.body);
+  
   const { email, priceId } = req.body;
 
   try {
