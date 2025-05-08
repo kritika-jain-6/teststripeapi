@@ -13,7 +13,7 @@ app.post("/create-subscription", async (req, res) => {
 
   try {
     const customer = await stripe.customers.create({ email });
-
+ 
     const subscription = await stripe.subscriptions.create({
       customer: customer.id,
       items: [{ price: priceId }],
