@@ -10,6 +10,7 @@ app.use(express.json());
 
 app.post("/create-subscription", async (req, res) => {
   const { email, priceId } = req.body;
+  
 
   try {
     const customer = await stripe.customers.create({ email });
